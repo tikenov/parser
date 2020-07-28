@@ -1,6 +1,6 @@
 const fs = require("fs");
 const XLSX = require("xlsx");
-const schema = require("./data/schema");
+const schema = require("./schema");
 
 const readFileContent = (file) => {
   const table = XLSX.readFile(folder + file);
@@ -20,7 +20,7 @@ const readFileContent = (file) => {
   }
 };
 
-const folder = "./data/";
+const folder = "./excel/";
 const result = { count: 0, data: [] };
 
 fs.readdirSync(folder).forEach((file) => {
